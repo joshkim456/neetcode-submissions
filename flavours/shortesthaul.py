@@ -4,7 +4,7 @@ class Solution:
     def shortestHaul(self, nums: List[int], target: int) -> int:
         l = 0
         r = 0
-        ans = 0
+        ans = float('inf')
         total = 0
 
         for r in range(len(nums)):
@@ -14,4 +14,8 @@ class Solution:
                 total -= nums[l]
                 l += 1
         
+        if ans == float('inf'):
+            return 0
         return ans
+    
+            
