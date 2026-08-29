@@ -8,4 +8,6 @@ class Solution:
         for r in range(len(heights)):
             while stack and heights[stack[-1]] >= heights[r]:
                 stack.pop()
-            
+            output[r] = stack[-1] if stack else -1
+            stack.append[r]
+        return stack
